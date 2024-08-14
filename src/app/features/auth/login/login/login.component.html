@@ -1,0 +1,63 @@
+<div class="w-full h-full flex flex-1">
+  <div class="flex flex-1 w-full justify-center items-center">
+    <div class="max-w-[600px] flex flex-col justify-start items-start gap-5">
+      <img src="/assets/svgs/logoTma.svg" />
+      <div class="flex flex-col gap-1">
+        <span class="text-4xl font-bold">Welcome!!</span>
+        <span class="text-[16px] font-semibold text-[#6D7474]"
+          >Please enter credentials to access your account.!!</span
+        >
+      </div>
+      <div class="w-full">
+        <form
+          (ngSubmit)="onSubmitForm()"
+          class="w-full flex flex-col justify-start items-start gap-2"
+          autocomplete="off"
+        >
+          <app-input [label]="'user name'" [require]="true" class="w-full">
+            <input
+              class="px-3 py-2 border border-gray-300 rounded w-full outline-none focus:border-blue-200"
+              matInput
+              [placeholder]="'enter user name' | upperCaseFirstLeter"
+              [(ngModel)]="account.account"
+              required="true"
+              maxlength="20"
+              type="text"
+              autocomplete="off"
+              name="account"
+            />
+          </app-input>
+
+          <app-input [label]="'password'" [require]="true" class="w-full">
+            <input
+              matInput
+              [placeholder]="'enter password' | upperCaseFirstLeter"
+              [(ngModel)]="account.password"
+              required="true"
+              maxlength="20"
+              type="text"
+              autocomplete="off"
+              class="input-password-mask px-3 py-2 border border-gray-300 rounded w-full outline-none focus:border-blue-200"
+              name="password"
+            />
+          </app-input>
+
+          <div class="flex items-center gap-3">
+            <input type="checkbox" />
+            <span class="">Remenber me</span>
+          </div>
+
+          <button
+            mat-raised-button
+            class="w-full flex justify-center items-center"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-1 w-full">
+    <img src="/assets/svgs/baner-login.svg" />
+  </div>
+</div>

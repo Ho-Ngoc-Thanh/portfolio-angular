@@ -1,0 +1,67 @@
+<div
+  class="w-[400px] p-5 flex flex-col justify-center items-center bg-white relative rounded-2xl gap-7"
+>
+  <img
+    src="../../../../assets/svgs/baner-login.svg"
+    class="w-[200px] h-[200px] rounded-2xl mt-[-100px]"
+  />
+
+  <div class="flex flex-col justify-center items-center">
+    <span class="font-bold text-3xl font-[Raleway]">Beatrice Wambui</span>
+    <span class="text-sm text-[#0B0909] font-medium">FullStack Developer</span>
+  </div>
+  <div class="flex justify-center items-center gap-2">
+    <div
+      *ngFor="let social of socials"
+      class="w-16 h-16 flex justify-center items-center rounded-2xl bg-[#F2F7FC]"
+    >
+      <i class="material-icons" [ngStyle]="{ color: social.color }">{{
+        social.icon
+      }}</i>
+    </div>
+  </div>
+  <!-- contac -->
+  <div
+    class="bg-[#F2F5F9] w-[350px] flex flex-col justify-center items-center rounded-2xl gap-4 p-8"
+  >
+    <div class="flex justify-start items-start py-3 gap-3 w-full">
+      <i class="material-icons color-icon">phone_iphone</i>
+      <div class="flex flex-col">
+        <span class="text-[#1A1003] text-sm font-semibold opacity-50"
+          >Phone</span
+        >
+        <span class="text-[#000000] text-sm font-semibold">0968 554 020</span>
+      </div>
+    </div>
+
+    <div
+      class="flex justify-start items-start py-3 gap-3 w-full border-t-[1px] border-b-[1px]"
+    >
+      <i class="material-icons color-icon">email</i>
+      <div class="flex flex-col">
+        <span class="text-[#1A1003] text-sm font-semibold opacity-50"
+          >Email</span
+        >
+        <span class="text-[#000000] text-sm font-semibold"
+          >thanhlck703gmail.com</span
+        >
+      </div>
+    </div>
+
+    <div
+      class="flex justify-start items-start py-3 gap-3 w-full border-b-[1px]"
+    >
+      <i class="material-icons color-icon">person_pin_circle</i>
+      <div class="flex flex-col">
+        <span class="text-[#1A1003] text-sm font-semibold opacity-50"
+          >Location</span
+        >
+        <span class="text-[#000000] text-sm font-semibold"
+          >100/1/2 Quy Nhơn - Bình Định</span
+        >
+      </div>
+    </div>
+
+    <button class="px-8 py-2 rounded-full bg-btn">Download Resume</button>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "account": "admin",
+      "password": "12345678",
+      "token": "123456789"
+    },
+    {
+      "id": 2,
+      "account": "user",
+      "password": "12345678",
+      "token": "1234567893"
+    },
+    {
+      "id": 3,
+      "account": "admin 3",
+      "password": "3333333",
+      "token": "3333333"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "javascrip tutorial",
+      "author": "typicode type"
+    },
+    {
+      "id": 3,
+      "title": "C++ tutorial",
+      "author": "speark type"
+    },
+    {
+      "author": "thanh",
+      "title": "thanh",
+      "description": "ssss",
+      "id": 7
+    },
+    {
+      "author": "12341234",
+      "title": "41234123",
+      "description": "12341234",
+      "id": 10
+    },
+    {
+      "author": "1234123",
+      "title": "1234213",
+      "description": "1234123",
+      "id": 11
+    },
+    {
+      "author": "1234213",
+      "title": "1234123",
+      "description": "213421",
+      "id": 12
+    },
+    {
+      "author": "213412",
+      "title": "12342134",
+      "description": "2134123",
+      "id": 13
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "new comment",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

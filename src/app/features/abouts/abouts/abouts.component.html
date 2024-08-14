@@ -1,0 +1,34 @@
+<div class="flex flex-col justify-center items-center">
+  <div class=" w-full flex-wrap flex justify-between items-center">
+    <div
+      class="w-1/2 flex justify-start items-start gap-2 p-3"
+      *ngFor="let photo of dataSource"
+    >
+      <img [src]="photo.thumbnailUrl" class="w-12 h-12 rounded" />
+      <div class="flex flex-col justify-start items-start">
+        <span>{{ photo.id + ". " + photo.title }}</span>
+        <span>{{ photo.url }}</span>
+      </div>
+    </div>
+    <div #scrollAnchor></div>
+  </div>
+  <div
+    class="flex w-full justify-center items-center p-5"
+    *ngIf="loading; else loadingTemplate"
+  >
+    loading....
+  </div>
+</div>
+
+<ng-template #loadingTemplate>
+  <div class="dot-spinner">
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+  </div>
+</ng-template>

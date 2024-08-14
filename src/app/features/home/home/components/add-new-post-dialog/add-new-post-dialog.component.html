@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>
+  <mat-label>Title Post</mat-label>
+  <input
+    class="m-input"
+    [(ngModel)]="formPost.title"
+    name="title"
+    placeholder="enter title"
+  />
+  <mat-label>Author Post</mat-label>
+  <input
+    class="m-input"
+    [(ngModel)]="formPost.author"
+    name="author"
+    placeholder="enter author"
+  />
+  <mat-label>Description Post</mat-label>
+  <input
+    class="m-input"
+    [(ngModel)]="formPost.description"
+    name="description"
+    placeholder="enter description"
+  />
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button cdkFocusInitial (click)="onSubmit()">Ok</button>
+</mat-dialog-actions>
+
+<!-- Copyright 2024 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->

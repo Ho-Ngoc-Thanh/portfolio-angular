@@ -1,0 +1,32 @@
+<a routerLink="/abouts">Abouts</a>
+<div class="w-full h-full flex flex-1 justify-center">
+  <div class="w-full xl:w-4/5 flex flex-col justify-start">
+    <app-head-table
+      [(keyword)]="keyword"
+      (keywordChanged)="keywordChanged.next($event)"
+      (onSubmitSuccess)="handleCreateSuccess()"
+    ></app-head-table>
+    <app-table-post
+      [dataSource]="dataSurce"
+      (handleDelete)="handleDelete($event)"
+      class="w-full"
+    >
+      <span #tableParent>{{ dataSurce | json }}</span>
+    </app-table-post>
+
+    <mat-paginator
+      #paginator
+      class="demo-paginator"
+      (page)="handlePageEvent($event)"
+      [length]="length"
+      [pageSize]="pageSize"
+      [disabled]="disabled"
+      [showFirstLastButtons]="showFirstLastButtons"
+      [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+      [hidePageSize]="false"
+      [pageIndex]="pageIndex"
+      aria-label="Select page"
+    >
+    </mat-paginator>
+  </div>
+</div>

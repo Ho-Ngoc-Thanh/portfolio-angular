@@ -1,0 +1,29 @@
+<div
+  class="py-8 px-10 flex flex-col justify-start items-start gap-9 bg-white rounded-2xl flex-1 w-full h-full"
+>
+  <div class="flex justify-start items-center w-full">
+    <span class="text-[#0B0909] text-[40px] font-medium">ABOUT ME</span>
+    <div class="bg-gradient w-[200px] h-[2px] rounded-full ml-8"></div>
+  </div>
+  <div class="text-[16px] font-medium">
+    {{ description }}
+  </div>
+  <div class="text-[32px] font-medium">What I do!</div>
+  <div class="w-full flex flex-wrap justify-between items-stretch gap-5">
+    <div
+      *ngFor="let item of homeList; let isOdd = odd; let isEven = even"
+      class="flex flex-col px-7 py-5 rounded-xl w-[calc(50%-10px)]"
+      [ngClass]="{ 'bg-[#FFEBD1]': isEven, 'bg-[#F2F7FC]': isOdd }"
+    >
+      <div class="flex gap-2 justify-start items-center">
+        <i
+          class="material-icons"
+          [ngClass]="{ 'text-[#E80505]': isEven, 'text-[#FF9C1A]': isOdd }"
+          >{{ item.icon }}</i
+        >
+        <div>{{ item.title }}</div>
+      </div>
+      <div>{{ item.description }}</div>
+    </div>
+  </div>
+</div>

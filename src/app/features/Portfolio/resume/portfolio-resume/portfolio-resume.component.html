@@ -6,6 +6,78 @@
     <div class="bg-gradient w-[200px] h-[2px] rounded-full ml-8"></div>
   </div>
 
-  <div class="flex gap-8 justify-between "></div>
- 
+  <div class="flex gap-8 justify-between items-center w-full">
+    <div class="flex flex-col flex-1 justify-start items-start gap-4">
+      <div class="flex justify-start items-center gap-3">
+        <i class="material-icons text-[#E80505]">school</i>
+        <span>Education</span>
+      </div>
+      <div
+        class="bg-[#FFE3BF] flex flex-col justify-start items-start gap-2 rounded-xl p-5 w-full"
+      >
+        <span class="text-sm text-[#1A1003] opacity-50">2020-2021</span>
+        <span class="text-sm text-[#1A1003] font-medium"
+          >Software Development
+        </span>
+        <span class="text-sm text-[#1A1003] font-medium">Moringa School</span>
+      </div>
+      <div
+        class="bg-[#FFEED9] flex flex-col justify-start items-start gap-2 rounded-xl p-5"
+      >
+        <span class="text-sm text-[#1A1003] opacity-50">2020-2021</span>
+        <span class="text-sm text-[#1A1003] font-medium"
+          >Software Development
+        </span>
+        <span class="text-sm text-[#1A1003] font-medium"
+          >Masinde Muliro Universiity
+        </span>
+      </div>
+    </div>
+    <!-- column 2 -->
+    <div class="flex flex-col flex-1 justify-start items-stretch gap-4">
+      <div class="flex justify-start items-center gap-3">
+        <i class="material-icons text-[#E80505]"> business_center</i>
+        <span>Experience</span>
+      </div>
+      <div
+        class="bg-[#FFEED9] flex flex-col justify-start items-start gap-2 rounded-xl p-5 w-full"
+      >
+        <span class="text-sm text-[#1A1003] opacity-50">2022 - Present</span>
+        <span class="text-sm text-[#1A1003] font-medium"
+          >Technical Mentor
+        </span>
+        <span class="text-sm text-[#1A1003] font-medium">Moringa School</span>
+      </div>
+      <div
+        class="bg-[#FFE3BF] flex flex-col justify-start items-start gap-2 rounded-xl p-5"
+      >
+        <span class="text-sm text-[#1A1003] opacity-50">2020-2021</span>
+        <span class="text-sm text-[#1A1003] font-medium"
+          >Software Development
+        </span>
+        <span class="text-sm text-[#1A1003] font-medium"
+          >Masinde Muliro Universiity
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex gap-8 justify-between items-stretch w-full">
+    <div class="flex flex-col justify-start">
+      <span class="text-xl font-medium">Work Skills</span>
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div *ngFor="let item of workSkil" class="p-2 rounded-xl bg-gray-300">
+          {{ item }}
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-start">
+      <span class="text-xl font-medium">Soft Skills</span>
+      <div class="flex flex-wrap items-start justify-start gap-4">
+        <div *ngFor="let item of softSkil" class="p-2 rounded-xl bg-gray-300">
+          {{ item }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

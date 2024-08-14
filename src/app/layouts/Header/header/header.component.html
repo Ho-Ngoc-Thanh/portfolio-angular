@@ -6,7 +6,9 @@
       <div
         [ngClass]="{
           'w-20 h-20 rounded-2xl flex flex-col justify-center items-center': true,
-          'bg-[#E1E8EF] text-[#000000]': !getActiveUrl(nav.link),
+          'bg-[#E1E8EF] text-[#000000] bg-gradient-hover': !getActiveUrl(
+            nav.link
+          ),
           'bg-gradient text-[#FFFFFF]': getActiveUrl(nav.link)
         }"
       >

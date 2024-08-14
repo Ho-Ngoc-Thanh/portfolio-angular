@@ -1,3 +1,6 @@
 .bg-gradient {
-	background: linear-gradient(to right, #FF9C1A, #E80505);
-  }
+  background: linear-gradient(to right, #ff9c1a, #e80505);
+}
+.bg-gradient-hover:hover {
+  background: linear-gradient(to right, #f5b25b, #f79595);
+}

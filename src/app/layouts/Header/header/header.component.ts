@@ -29,6 +29,11 @@ export class HeaderComponent implements OnInit, DoCheck {
       link: '/contact',
       icon: 'mail',
     },
+    {
+      title: 'Demo',
+      link: '/login',
+      icon: 'smoking_rooms',
+    },
   ];
   activeUrl: string = '';
   constructor(private route: Router) {}

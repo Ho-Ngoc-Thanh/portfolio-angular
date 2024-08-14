@@ -35,7 +35,7 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'home',
+    path: 'table',
     component: HomeComponent,
   },
   {

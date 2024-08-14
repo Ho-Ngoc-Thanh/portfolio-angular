@@ -13,8 +13,8 @@ import { SnackbarService } from 'src/app/features/services/snackBar/snackbar.ser
 })
 export class LoginComponent {
   account = {
-    account: '',
-    password: '',
+    account: 'admin',
+    password: '12345678',
   };
   constructor(
     private router: Router,
@@ -33,8 +33,8 @@ export class LoginComponent {
           next: (results) => {
             const [user] = results;
             if (user) {
-              this.authService.setRole = user?.account
-              this.router.navigate(['/']);
+              this.authService.setRole = user?.account;
+              this.router.navigate(['/table']);
             } else {
               this.snackbar.openSnackBar({
                 message: 'user name or password invalid',

@@ -17,7 +17,7 @@ const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       {
-        path: 'home',
+        path: '',
         component: PortfolioHomeComponent,
       },
       {

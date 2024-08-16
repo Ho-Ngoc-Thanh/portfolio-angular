@@ -7,11 +7,11 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit, DoCheck {
+export class HeaderComponent {
   headerList: NavItem[] = [
     {
       title: 'home',
-      link: '/home',
+      link: '/',
       icon: 'home',
     },
     {
@@ -38,15 +38,7 @@ export class HeaderComponent implements OnInit, DoCheck {
   activeUrl: string = '';
   constructor(private route: Router) {}
 
-  ngOnInit(): void {}
-
-  ngDoCheck(): void {
-    this.activeUrl = window.location.pathname;
-    console.log(this.activeUrl);
-  }
-
   getActiveUrl(link: string): boolean {
-    console.log(link, this.route.url === link);
     return this.route.url === link;
   }
 }
